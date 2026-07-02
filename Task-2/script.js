@@ -47,3 +47,30 @@ card.classList.add("show");
 });
 
 });
+function changePain(type, element){
+
+    document.querySelectorAll(".pain-btn").forEach(btn=>{
+        btn.classList.remove("active");
+    });
+
+    element.classList.add("active");
+
+    const title=document.getElementById("painTitle");
+    const desc=document.getElementById("painDesc");
+
+    if(type==="knee"){
+        title.innerHTML="Matched: Knee & Joint Care";
+        desc.innerHTML="Our orthopaedic specialists treat knee pain, ligament injuries, arthritis and sports injuries with personalized consultation.";
+    }
+
+    if(type==="back"){
+        title.innerHTML="Matched: Spine & Back Care";
+        desc.innerHTML="Expert treatment for lower back pain, slipped disc, posture problems and spine-related disorders.";
+    }
+
+    if(type==="shoulder"){
+        title.innerHTML="Matched: Shoulder & Sports Injury Care";
+        desc.innerHTML="Specialized consultation for shoulder pain, frozen shoulder, rotator cuff injuries and sports injuries.";
+    }
+
+}
