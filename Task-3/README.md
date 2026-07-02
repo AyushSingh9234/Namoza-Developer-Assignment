@@ -2,7 +2,7 @@
 
 ## End-to-End Integration Architecture
 
-When a patient submits the consultation form, the landing page first validates the Name, Phone Number, and Clinic Preference. After successful validation, a `consultation_form_submitted` event is pushed to the dataLayer so Google Tag Manager can send the conversion event to Google Analytics 4 and Google Ads.
+When a patient submits the consultation form, the landing page first validates the Name, Phone Number, and Clinic Preference. After successful validation, a 'consultation_form_submitted' event is pushed to the dataLayer so Google Tag Manager can send the conversion event to Google Analytics 4 and Google Ads.
 
 The form data is then sent to a backend API using a POST request. The backend checks whether a contact with the same phone number already exists in HubSpot. Since HubSpot mainly performs duplicate checks using email, I would first search the contact using the Phone property. If the phone number already exists, the existing contact will be updated. Otherwise, a new contact will be created.
 
